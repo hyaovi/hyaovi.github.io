@@ -1,0 +1,125 @@
+body {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 600;
+}
+
+.btn {
+  font-size: 1.125rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1.0625rem;
+  font-weight: 600;
+  border: none;
+
+  @media screen and (min-width: '500px') {
+    padding: 1.5rem 3rem;
+  }
+}
+
+.btn-gradient,
+.btn-cta {
+  color: white;
+  background: $yellowish;
+  background: linear-gradient(-45deg,
+      rgba($redish, 1) 0%,
+      rgba($yellowish, 1) 100%);
+}
+
+.heading {
+  font-size: 1.625rem;
+}
+
+.shadow-cta {
+  box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.6);
+}
+
+.photo {
+  height: 52px;
+  width: 52px;
+}
+
+.available {
+  color: $green;
+  font-size: .825rem;
+  padding: .5rem .7rem;
+  border-radius: 1rem;
+  background-color: rgba($color:$green, $alpha: .1);
+}
+
+.icon-pill {
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.3);
+  -webkit-border-radius: 50% !important;
+  border-radius: 2rem !important;
+  background-color: white;
+
+  &:hover {
+
+    box-shadow: 0.425rem 0.7rem 1rem rgba($color: $redish, $alpha: 0.3);
+    background: linear-gradient(-45deg,
+        rgba($redish, 0.5) 0%,
+        rgba($yellowish, 0.5) 100%);
+
+  }
+}
+
+.project-card {
+  transition: all ease-in 0.3s;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  border: 1px solid rgba($color: $light, $alpha: 0.7);
+  background-color: white;
+
+  .card-img-top {
+    border-radius: 1.0625rem;
+    box-shadow: 0.625rem 0.8rem 1.2rem rgba($color: #47535e, $alpha: 0.3);
+
+    img {
+      border-radius: 1.0625rem;
+    }
+  }
+
+  .card-body {
+    .icon-pill {
+      display: flex;
+      height: 5rem;
+      width: 5rem;
+      box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.3);
+      -webkit-border-radius: 50% !important;
+      border-radius: 2rem !important;
+      background-color: white;
+
+      &:hover {
+        .icon-pill {
+          box-shadow: 0.425rem 0.7rem 1rem rgba($color: $redish, $alpha: 0.3);
+          background: linear-gradient(-45deg,
+              rgba($redish, 0.5) 0%,
+              rgba($yellowish, 0.5) 100%);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $light;
+    box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.1);
+
+    .icon-pill {
+      box-shadow: 0.425rem 0.7rem 1rem rgba($color: $redish, $alpha: 0.3);
+      background: linear-gradient(-45deg,
+          rgba($redish, 0.5) 0%,
+          rgba($yellowish, 0.5) 100%);
+    }
+  }
+}
