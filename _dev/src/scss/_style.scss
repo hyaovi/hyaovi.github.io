@@ -1,125 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Ubuntu+Mono&display=swap');
 body {
   font-size: 100%;
   box-sizing: border-box;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-weight: 600;
-}
-
-.btn {
-  font-size: 1.125rem;
-  padding: 1.5rem 2rem;
-  border-radius: 1.0625rem;
-  font-weight: 600;
-  border: none;
-
-  @media screen and (min-width: '500px') {
-    padding: 1.5rem 3rem;
-  }
-}
-
-.btn-gradient,
-.btn-cta {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: $blue-night;
   color: white;
-  background: $yellowish;
-  background: linear-gradient(-45deg,
-      rgba($redish, 1) 0%,
-      rgba($yellowish, 1) 100%);
 }
 
-.heading {
-  font-size: 1.625rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
-
-.shadow-cta {
-  box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.6);
+p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
 }
-
-.photo {
-  height: 52px;
-  width: 52px;
-}
-
-.available {
+a,
+a:visited {
   color: $green;
-  font-size: .825rem;
-  padding: .5rem .7rem;
-  border-radius: 1rem;
-  background-color: rgba($color:$green, $alpha: .1);
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.greetings {
+  margin-bottom: 0;
+}
+.text-green {
+  color: $green;
+}
+.name {
+  font-size: 2rem;
+}
+.socials {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0.5rem;
+    color: white;
+    &:first-child {
+      margin: 0.5rem 0.5rem 0rem 0.5rem;
+
+    }
+    &:hover{
+      color: $green;
+    }
+  }
+}
+.btn-cta {
+  border-radius: 4px;
+  border: $green 1px solid;
+  padding: 0.75rem 1rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  &:hover {
+    // color: black;
+    background-color: rgba($green, $alpha: 0.2);
+  }
+}
+.btn-cv {
+  display: none;
 }
 
-.icon-pill {
+.container {
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  height: 5rem;
-  width: 5rem;
-  box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.3);
-  -webkit-border-radius: 50% !important;
-  border-radius: 2rem !important;
-  background-color: white;
-
-  &:hover {
-
-    box-shadow: 0.425rem 0.7rem 1rem rgba($color: $redish, $alpha: 0.3);
-    background: linear-gradient(-45deg,
-        rgba($redish, 0.5) 0%,
-        rgba($yellowish, 0.5) 100%);
-
-  }
+  justify-content: center;
+  padding: 0px 15px;
 }
-
-.project-card {
-  transition: all ease-in 0.3s;
-  padding: 1.5rem;
-  border: none;
-  border-radius: 2rem;
-  border: 1px solid rgba($color: $light, $alpha: 0.7);
-  background-color: white;
-
-  .card-img-top {
-    border-radius: 1.0625rem;
-    box-shadow: 0.625rem 0.8rem 1.2rem rgba($color: #47535e, $alpha: 0.3);
-
-    img {
-      border-radius: 1.0625rem;
-    }
-  }
-
-  .card-body {
-    .icon-pill {
-      display: flex;
-      height: 5rem;
-      width: 5rem;
-      box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.3);
-      -webkit-border-radius: 50% !important;
-      border-radius: 2rem !important;
-      background-color: white;
-
-      &:hover {
-        .icon-pill {
-          box-shadow: 0.425rem 0.7rem 1rem rgba($color: $redish, $alpha: 0.3);
-          background: linear-gradient(-45deg,
-              rgba($redish, 0.5) 0%,
-              rgba($yellowish, 0.5) 100%);
-        }
-      }
-    }
-  }
-
-  &:hover {
-    background-color: $light;
-    box-shadow: 2.625rem 2rem 5rem rgba($color: #47535e, $alpha: 0.1);
-
-    .icon-pill {
-      box-shadow: 0.425rem 0.7rem 1rem rgba($color: $redish, $alpha: 0.3);
-      background: linear-gradient(-45deg,
-          rgba($redish, 0.5) 0%,
-          rgba($yellowish, 0.5) 100%);
-    }
-  }
+.content {
+  margin: auto;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.actions {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+.roles{
+  margin-bottom: 3rem;
+  color: $green;
+  text-transform: uppercase;
 }
