@@ -57,7 +57,7 @@ h1 {
   padding: 2rem;
   text-align: left;
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
